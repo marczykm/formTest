@@ -5,16 +5,14 @@ package com.example.model;
  */
 public class Person {
     private String firstname;
-    private String lastname;
     private Address address;
 
     public Person() {
     }
 
 
-    public Person(String firstname, String lastname, Address address) {
+    public Person(String firstname, Address address) {
         this.firstname = firstname;
-        this.lastname = lastname;
         this.address = address;
     }
 
@@ -24,14 +22,6 @@ public class Person {
 
     public void setFirstname(String firstname) {
         this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
     }
 
     public Address getAddress() {
@@ -46,7 +36,6 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
                 ", address=" + address +
                 '}';
     }

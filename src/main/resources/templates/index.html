@@ -6,12 +6,9 @@
 </head>
 <body>
 
-    <form action="#" th:action="@{/save}" th:object="${person}" method="post">
-        <p>Firstname: <input type="text" th:field="*{firstname}" /></p>
-        <p>Lastname: <input type="text" th:field="*{lastname}" /></p>
-        <p>Address</p>
-        <p>City: <input type="text" th:field="*{city}"/></p>
-        <p>Street: <input type="text" th:field="*{street}"/></p>
+    <form action="#" th:action="@{/save}" method="post">
+        <p>Firstname: <input type="text" name="firstname" th:value="${person.firstname}" /></p>
+        <p>City: <input type="text" name="city" th:value="${address.city}"/></p>
 
         <p><input type="submit" value="Submit" /><input type="reset" value="Reset" /></p>
     </form>

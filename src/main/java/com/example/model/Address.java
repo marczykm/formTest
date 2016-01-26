@@ -5,14 +5,12 @@ package com.example.model;
  */
 public class Address {
     private String city;
-    private int street;
 
     public Address() {
     }
 
-    public Address(String city, int street) {
+    public Address(String city) {
         this.city = city;
-        this.street = street;
     }
 
     public String getCity() {
@@ -23,19 +21,10 @@ public class Address {
         this.city = city;
     }
 
-    public int getStreet() {
-        return street;
-    }
-
-    public void setStreet(int street) {
-        this.street = street;
-    }
-
     @Override
     public String toString() {
         return "Address{" +
                 "city='" + city + '\'' +
-                ", street=" + street +
                 '}';
     }
 }
