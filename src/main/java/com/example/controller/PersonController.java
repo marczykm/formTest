@@ -18,13 +18,11 @@ public class PersonController {
     @RequestMapping
     public String index(Model model){
         model.addAttribute("person", new Person());
-        model.addAttribute("address", new Address());
         return "index";
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String save(@ModelAttribute Person person, @ModelAttribute Address address, Model model){
-        person.setAddress(address);
+    public String save(@ModelAttribute Person person, Model model){
         model.addAttribute("person", person);
 
         System.out.println(person);

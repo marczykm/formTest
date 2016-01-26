@@ -1,5 +1,7 @@
 package com.example.model;
 
+import sun.applet.AppletEventMulticaster;
+
 /**
  * Created by MMARCZYK on 2016-01-26.
  */
@@ -8,8 +10,8 @@ public class Person {
     private Address address;
 
     public Person() {
+        address = new Address();
     }
-
 
     public Person(String firstname, Address address) {
         this.firstname = firstname;

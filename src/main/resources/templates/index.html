@@ -8,7 +8,7 @@
 
     <form action="#" th:action="@{/save}" method="post">
         <p>Firstname: <input type="text" name="firstname" th:value="${person.firstname}" /></p>
-        <p>City: <input type="text" name="city" th:value="${address.city}"/></p>
+        <p>City: <input type="text" name="city" th:value="${person.address.city}"/></p>
 
         <p><input type="submit" value="Submit" /><input type="reset" value="Reset" /></p>
     </form>
