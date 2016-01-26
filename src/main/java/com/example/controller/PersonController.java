@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import com.example.model.Address;
 import com.example.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +23,6 @@ public class PersonController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@ModelAttribute Person person, Model model){
         model.addAttribute("person", person);
-
         System.out.println(person);
         return "save";
     }
